@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="home-html">
+	
+	<script>
+		window.onload = function() {
+			let searcherror = document.getElementById('bool').textContent;
+
+		
+			if (searcherror.includes("false")) {
+				document.getElementById('searcherror').hidden = true;
+			}
+			else {
+				document.getElementById('searcherror').hidden = false;
+			}
+			
+		}
+	</script>
+		
+	<text id="bool" hidden="hidden">
+		<%= searcherror %>
+	</text>
+
+	<head class="home-head">
+		
+		<!-- Makes the webpage dynamically adjust based on device used -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+		
+		<!-- What appears on the tab -->
+		<title>
+			Home
+		</title>
+		
+		<!-- Icon on page tab (Change this out for downloaded image once figure out how) -->
+		<link rel="icon" href="https://www.bellevuecollege.edu/wp-content/uploads/sites/23/2019/12/PRI_BC_Bulldog-Head_CMYK.png">
+		
+		<div id="searcherror" class="alert alert-warning" role="alert">
+  			Error: The page you were looking for could not be found.
+		</div>
+		
+		<!-- Page Title -->
+		<h1 class="home-h1">
+			Bellevue College Computer Programming Club
+		</h1> 
+		
+
+	</head>
+	
+	<body class="home-body">
+		
+		<!-- Navigation Bar -->
+		<div class="home-topnav">
+  			<a class="home-active" href="/home">Home</a>
+  			<a href="/news">News</a>
+			<a href="/projects">Projects</a>
+			<a href="/leadership">Leadership</a>
+  			<a href="/contact">Contact</a>
+  			<a href="/about">About</a>
+			<form method="POST" >
+				<input name="query" id="search-bar" type="text" placeholder="Search..">
+					<!-- Bug with button sucking ass plz fix 
+					<button  id="search-submit" type="submit">
+					GO!
+					</button>
+					-->
+			</form>
+			
+		</div>
+		
+		<div>
+			
+			
+			<!-- <div class="d-flex justify-content-center">
+				<h1 class="home-h1">
+					Bellevue College Computer Programming Club 
+				</h1>
+			</div> -->
+			
+			<!-- <div class="d-flex justify-content-center">
+				<p class="home-about-p">
+					Manchester City Football Club, commonly referred to as Manchester City, Man City or simply City, is an English football club based in Manchester that competes in the Premier League, the top division in the English football league system. It was founded in 1880 as St. Mark's (West Gorton), then Ardwick Association Football Club in 1887 and Manchester City in 1894. The club's home ground is the Etihad Stadium in east Manchester, to which they moved in 2003, having played at Maine Road since 1923. Manchester City adopted their sky blue home shirts in 1894, in the first season with the current name.[3] Since its inception, the club has won eight league titles, six FA Cups, eight League Cups, six FA Community Shields and one European Cup Winners' Cup.
+				</p>
+
+			</div>
+			
+			<div class="d-flex justify-content-center">
+				<p class="home-about-p">
+					The club joined the Football League in 1892, and won their first major honour, the FA Cup, in 1904. The club had its first major period of success in the late 1960s and early 1970s, winning the league title, FA Cup, League Cup, and European Cup Winners Cup under the management of Joe Mercer and Malcolm Allison. After losing the 1981 FA Cup Final, Manchester City went through a period of decline, culminating in relegation to the third tier of English football for the only time in their history in 1998. Following promotion to the top tier in 2001–02, they have remained in the Premier League since 2002–03.
+				</p>
+			</div> -->
+			
+			<div class="d-flex justify-content-center">
+				
+				<div class="home-background-div">
+					
+					<div class="d-flex justify-content-center">
+						<h1 class="home-background-h1">
+							Bellevue College Computer Programming Club
+						</h1>
+					</div>
+					
+					<!-- dosen't fit on screen of computer image
+					<div class="d-flex justify-content-center">
+						<h2 class="home-background-h3">
+							Inspiring the next generation of programmers at Bellevue College
+						</h2>
+					</div>
+					-->
+					
+				</div>
+			
+			</div>	
+			
+			<div class="home-about-div">
+				<h1 class="home-about-h1">
+					About Us
+				</h1>
+				
+				<div class="d-flex justify-content-center">
+					<p class="home-about-p">
+						Welcome to the Bellevue College Computer Programming Club! Founded in 2022, the Bellevue College Computer Programming Club is the largest computer science club at Bellevue College. We are a vibrant community of tech enthusiasts, coders, and problem solvers who share a common passion for all things related to computer programming. Founded with the mission of fostering a dynamic learning environment and providing a platform for students to explore the exciting world of software development, our club has been a hub for innovation and collaboration at Bellevue College for years.
+					</p>
+				</div>
+					
+				<div class="d-flex justify-content-center">
+					<p class="home-about-p">
+						At our core, we believe in the power of programming to transform ideas into reality. Whether you're a seasoned coder or just starting your coding journey, our club is the perfect place to connect with like-minded individuals, engage in hands-on projects, and stay up-to-date with the latest trends in the tech industry. Through workshops, coding competitions, guest lectures, and networking events, we aim to empower our members with the skills and knowledge they need to thrive in the ever-evolving field of computer programming. Join us on this exciting journey as we explore the limitless possibilities of code and build a brighter future together.
+					</p>
+				</div>
+				
+			</div>
+			
+			<div class="d-flex justify-content-around">
+				
+				<div id="home-card" class="card">
+					<div class="card-body">
+						<img class="card-img-top" src="https://historylink.org/Content/Media/Photos/Large/bellevue-community-college-campus-ca-21st-century.jpg" alt="Card image cap">
+						<h5 class="card-title home-card-title">Community</h5>
+						<p class="card-text">Be a part of Bellevue College's premier computer science community!</p>
+					</div>
+				</div>
+
+				<div id="home-card" class="card">
+					<div class="card-body">
+						<img class="card-img-top" src="https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg" alt="Card image cap">
+						<h5 class="card-title home-card-title">Coding</h5>
+						<p class="card-text">Learn to code in a variety of popular languages and frameworks, such as JavaScript, Node.js, Express, Python, C++, Java, R, and many more!</p>
+					</div>
+				</div>
+
+				<div id="home-card" class="card">
+					<div class="card-body">
+						<img class="card-img-top" src="https://storecms.blob.core.windows.net/uploads/d814c80d-70f0-49be-982d-3b93360f30d0-developers-collaborating-coding-project-.jpeg" alt="Card image cap">
+						<h5 class="card-title home-card-title">Collabaration</h5>
+						<p class="card-text">Join together with newcomers and experienced programmers alike at any point in your programming journey!</p>
+					</div>
+				</div>
+
+			</div>
+			
+			
+			<div class="d-flex justify-content-around">
+				<img class="home-circle" src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png">
+				<img class="home-circle" src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png">
+			</div>
+			
+			<div class="d-flex justify-content-around">
+				<img class="home-circle" src="https://w1.pngwing.com/pngs/864/405/png-transparent-computer-java-programming-language-computer-program-computer-software-teamcity-line-circle.png">
+				<img class="home-circle" src="https://rms.koenig-solutions.com/Sync_data/CCE_Logo/2874-download(5).jpegL.jpg">
+			</div>
+			
+			<div class="d-flex justify-content-around">
+				<img class="home-circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Eo_circle_yellow_letter-c.svg/1024px-Eo_circle_yellow_letter-c.svg.png">
+				
+				<div class="home-circle">
+					<div class="home-circle-text d-flex justify-content-center">And so</div>
+					<div class="d-flex justify-content-center">much more!</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			<br>
+			<br>
+			<div id="home-footer-div">
+				<p>
+					
+					<br>
+					<br>
+					<br>
+					Placeholder for Icons
+					
+					<br>
+					<br>
+					© Bellevue College Computer Programming Club. All rights reserved.
+					
+					
+					<br>
+					<br>
+					
+					Website by <em>Maximus Carver, Ethan Leonard</em>
+					
+					
+					<br>
+					<br>
+					<br>
+				</p>
+			</div>
+			
+			
+		</div>
+		
+	</body>
+	
+</html>

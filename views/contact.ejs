@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="contact-html">
+
+
+	<style>
+		.contact-heading {
+			font-family: Rockwell; 
+			margin-left: 25px;
+		}
+
+		.container {
+			width: 100%;
+			margin: 5px;
+			float: left;
+		}
+
+		form {
+			background-color: lightgray;
+			border: 5px solid black;
+			border-radius: 10px;
+			padding: 10px;
+			width: 30%;
+			min-width: 300px;
+			
+		}
+
+		label {
+			display: block;
+			font-weight: bold;
+			font-family: Rockwell; 
+			margin-bottom: 10px;
+		}
+
+		input[type="text"],input[type="email"] {
+			width: 65%;
+			padding: 10px;
+			margin-bottom: 15px;
+			border: 1px solid black;
+			border-radius: 10px;
+		}
+
+		textarea {
+			width: 80%;
+			border-radius: 10px;
+		}
+
+		input[type="submit"] {
+			background-color: blue;
+			color: white;
+			padding: 10px;
+			border-radius: 10px;
+		}
+
+		input[type="submit"]:hover {
+			cursor: pointer;
+			background-color: lightblue;
+		}
+
+		*/
+
+
+	</style>
+
+	
+	<script>
+		function discordb() {
+			window.open("https://discord.gg/hqMSesr3")
+		}
+	</script>
+	
+	<head class="contact-head">
+		
+		<!-- Makes the webpage dynamically adjust based on device used -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+		
+		<!-- What appears on the tab -->
+		<title>
+			Contact
+		</title>
+		
+		<!-- Icon on page tab (Change this out for downloaded image once figure out how) -->
+		<link rel="icon" href="https://www.bellevuecollege.edu/wp-content/uploads/sites/23/2019/12/PRI_BC_Bulldog-Head_CMYK.png">
+		
+	</head>
+	
+	<body class="contact-body">
+		
+		<!-- Page Title -->
+		<h1 class="home-h1">
+			Contact Information
+		</h1>
+		
+		<div class="home-topnav">
+  			<a class="home-active" href="/home">Home</a>
+  			<a href="/news">News</a>
+			<a href="/projects">Projects</a>
+			<a href="/leadership">Leadership</a>
+  			<a href="/contact">Contact</a>
+  			<a href="/about">About</a>
+		</div>
+		
+
+		<!-- too hard to get scaling right
+		<h1 id="contact-title">
+			We love hearing from you!
+		</h1>
+
+		-->
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		
+		<div>
+		
+			<ul id="contact-info">
+				
+				<lo class="contact-lbold">Club Contact: Ethan Leonard</lo>
+				<br>
+				<lo>Club Contact Email: ethan.leonard@bellevuecollege.edu</lo>
+				<br>
+				<lo class="contact-lbold">Advisor Name: Joseph Hueffed</lo>
+				<br>
+				<lo>Advisor Email: joseph.hueffed@bellevuecollege.edu</lo>	
+				
+			</ul>
+			
+		</div>	
+		
+					
+		<div>
+			
+			<button onclick="discordb()" class="btn btn-primary" id="contact-discordb" type="button">Join our discord!</button>
+			
+		</div> 
+
+	</body>
+	
+	<body>
+
+		<!-- Form Division Created -->
+		<div class="container">			
+			<!-- The current URL allows user to send message (through form) directly to my email. I've used 3rd party Formspree backend integration. 
+				 We should create an account (Formspree) for our club, thereby replacing the URL that connects to my account, but feel free to try sending 
+				 message! I'll show you what it looks like. -->
+			<form id="fs-frm" name="contact form" accept-charset="utf-8" action="https://formspree.io/f/mdovvyoy" method="post">
+				<h3 class="contact-heading">Leave us a message</h3>
+    			<fieldset id="fs-frm-inputs">
+        			<label for="name">Full Name:</label>
+        			<input type="text" name="name" id="name" placeholder="e.g. Steve" required>
+					<br>
+        			<label for="email">Email:</label>
+        			<input type="email" name="email" id="email" placeholder="test123@example.com" required>
+					<br>
+        			<label for="message">Your Message:</label>
+					<br>
+        			<textarea rows="5" name="message" id="message" placeholder="Write your message..." required></textarea>
+					<br>
+        			<input type="hidden" name="subject" id="subject" value="Contact Form Submission">
+       			 </fieldset>
+        		<input type="submit" value="Submit">
+    		</form>
+		</div>
+		<!-- End of Form -->
+		
+	</body>
+	
+</html>
