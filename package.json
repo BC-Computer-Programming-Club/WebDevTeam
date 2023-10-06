@@ -1,7 +1,7 @@
 {
   "name": "clubwebsite",
   "version": "1.0.0",
-  "description": "",
+  "description": "The member-made website for the Computer Programming Club.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
