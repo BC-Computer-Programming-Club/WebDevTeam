@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="contact-html">
+<head class="contact-head">
+    <meta name="viewport" content="width=390, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="https://www.bellevuecollege.edu/wp-content/uploads/sites/23/2019/12/PRI_BC_Bulldog-Head_CMYK.png">
+    <style>
+        .contact-heading {
+            font-family: Rockwell, serif;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            margin: 5px auto;
+        }
+
+        form {
+            background-color: lightgray;
+            border: 5px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            font-family: Rockwell, serif;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            cursor: pointer;
+            background-color: lightblue;
+        }
+
+        body {
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .contact-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="contact-body">
+<h1 class="contact-heading">Contact Information</h1>
+<div class="home-topnav">
+    <a class="home-active" href="/home">Home</a>
+    <a href="/news">News</a>
+    <a href="/projects">Projects</a>
+    <a href="/leadership">Leadership</a>
+    <a href="/contact">Contact</a>
+    <a href="/about">About</a>
+</div>
+<br>
+<div>
+    <ul id="contact-info">
+        <li class="contact-lbold">Club Contact: Ethan Leonard</li>
+        <li>Club Contact Email: ethan.leonard@bellevuecollege.edu</li>
+        <li class="contact-lbold">Advisor Name: Joseph Hueffed</li>
+        <li>Advisor Email: joseph.hueffed@bellevuecollege.edu</li>
+    </ul>
+</div>
+<div class="contact-container">
+    <p>Text about emails goes here.</p>
+    <form id="fs-frm" name="contact form" accept-charset="utf-8" action="https://formspree.io/f/mdovvyoy" method="post">
+        <h3 class="contact-heading">Leave us a message</h3>
+        <fieldset id="fs-frm-inputs">
+            <label for="name">Full Name:</label>
+            <input type="text" name="name" id="name" placeholder="e.g. Steve" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="steve@bellevuecollege.edu" required>
+            <label for="message">Your Message:</label>
+            <textarea rows="5" name="message" id="message" placeholder="Write your message..." required></textarea>
+            <input type="hidden" name="subject" id="subject" value="Contact Form Submission">
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

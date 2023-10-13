@@ -1,12 +1,30 @@
-var express = require("express");
-var app = express();
+const express = require("express");
+const useragent = require('express-useragent');
+const app = express();
 
 app.use(express.static("Public"));
 app.use(express.static("Images"));
 app.use(express.json());
 
 // Very important line - not too sure what exactly it does but it makes req.body actually work
+app.use(useragent.express());
 app.use(express.urlencoded({ extended : true}));
+
+let mobileDevice;
+
+app.get('/', (req, res) => {
+	if (req.useragent.isMobile) {
+		// User is on a mobile device
+		mobileDevice = true;
+		res.send('You are using a mobile device.');
+	} else {
+		// User is not on a mobile device
+		mobileDevice = false;
+		res.send('You are not on a mobile device.');
+	}
+});
+
+console.log(mobileDevice);
 
 
 app.get("/", function(req, res) {
@@ -60,6 +78,16 @@ app.post("/home", function(req, res) {
 	//res.render("searcherror.ejs");
 //});
 
+if (mobileDevice) {
+	app.get("/contact", function (req, res) {
+		res.render("contact_mobile.ejs")
+	})
+} else {
+	app.get("/contact", function (req, res) {
+		res.render("contact_desktop.ejs")
+	})
+}
+
 app.get("/contact", function(req, res) {
 	res.render("contact.ejs");
 });
@@ -69,12 +97,13 @@ app.get("/news", function(req, res) {
 	res.render("news.ejs");	
 });
 
+const port = 3000;
 
-app.listen(3000, function(err, success) {
+app.listen(port, function(err, success) {
 	if(err) {
-		console.log(err);
-		console.log("ERROR!!!");
+		console.error("ERROR!!!");
+		console.error(err.error);
 	} else {
 		console.log("The server has started");
 	}
-}); 
+});
