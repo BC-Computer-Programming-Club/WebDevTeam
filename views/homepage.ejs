@@ -47,31 +47,20 @@
 			Bellevue College Computer Programming Club
 		</h1> 
 
-		<!-- Attempt to style the submit button (copied from internet)
+		<!-- Attempt to style the submit button (copied from internet)-->
 		<style>
-			form.home-topnav button {
-			float: left;
-			width: 20%;
-			padding: 10px;
-			background: #2196F3;
-			color: white;
-			font-size: 17px;
-			border: 1px solid grey;
-			border-left: none;
-			cursor: pointer;
-			}
-		
-			form.home-topnav button:hover {
-			background: #0b7dda;
-			}
-			
-			form.home-topnav::after {
-			content: "";
-			clear: both;
-			display: table;
-			}
-		</style>
-	     -->
+            button {
+                background-color: grey;
+                width: 40px;
+                height: 40px;
+                font-size: 24px;
+            }
+
+            button:hover {
+                background-color: blue;
+            }
+        </style>
+	     
 
 	</head>
 	
@@ -90,7 +79,8 @@
 				<input name="query" id="search-bar" type="text" placeholder="Search..">
 
 				<!--Crappy small submit button (copied from internet)-->
-				<button style = "background-color:blue; width: 50px; height: 50px;" type="submit"><i class="home-topnav"></i></button>
+				<button type="submit"><i class="home-topnav"></i></button>
+
 				
 					<!-- Bug with button sucking ass plz fix 
 					<button  id="search-submit" type="submit">
