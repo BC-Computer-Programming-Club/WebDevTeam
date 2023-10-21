@@ -11,8 +11,7 @@
 
 		.container {
 			width: 100%;
-			margin: 5px;
-			float: left;
+			margin: 100px;
 		}
 
 		form {
@@ -20,9 +19,8 @@
 			border: 5px solid black;
 			border-radius: 10px;
 			padding: 10px;
-			width: 30%;
+			width: fit-content;
 			min-width: 300px;
-			
 		}
 
 		label {
@@ -57,17 +55,15 @@
 			background-color: lightblue;
 		}
 
-		*/
-
-
+		section#formsection.all { background-color: red; font-size: 20px;height: 50%; }
 	</style>
 
 	
-	<script>
+	<!--<script>
 		function discordb() {
-			window.open("https://discord.gg/hqMSesr3")
+			window.open("https://discord.gg/FFr86tZ4ce")
 		}
-	</script>
+	</script>-->
 	
 	<head class="contact-head">
 		
@@ -78,6 +74,9 @@
 		<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
 		<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
 		
+		<!-- connecting to fontawesome.com for icons (By Liao) -->
+		<script src="https://kit.fontawesome.com/a58ede48c2.js" crossorigin="anonymous"></script>
+
 		<!-- What appears on the tab -->
 		<title>
 			Contact
@@ -112,23 +111,6 @@
 
 		-->
 
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-
-		
 		<div>
 		
 			<ul id="contact-info">
@@ -144,43 +126,71 @@
 			</ul>
 			
 		</div>	
+
+		
 		
 					
-		<div>
+		<!--<div>
 			
 			<button onclick="discordb()" class="btn btn-primary" id="contact-discordb" type="button">Join our discord!</button>
 			
-		</div> 
+		</div> --> 
 
-	</body>
-	
-	<body>
-
-		<!-- Form Division Created -->
-		<div class="container">			
-			<!-- The current URL allows user to send message (through form) directly to my email. I've used 3rd party Formspree backend integration. 
-				 We should create an account (Formspree) for our club, thereby replacing the URL that connects to my account, but feel free to try sending 
-				 message! I'll show you what it looks like. -->
-			<form id="fs-frm" name="contact form" accept-charset="utf-8" action="https://formspree.io/f/mdovvyoy" method="post">
-				<h3 class="contact-heading">Leave us a message</h3>
-    			<fieldset id="fs-frm-inputs">
-        			<label for="name">Full Name:</label>
-        			<input type="text" name="name" id="name" placeholder="e.g. Steve" required>
-					<br>
-        			<label for="email">Email:</label>
-        			<input type="email" name="email" id="email" placeholder="test123@example.com" required>
-					<br>
-        			<label for="message">Your Message:</label>
-					<br>
-        			<textarea rows="5" name="message" id="message" placeholder="Write your message..." required></textarea>
-					<br>
-        			<input type="hidden" name="subject" id="subject" value="Contact Form Submission">
-       			 </fieldset>
-        		<input type="submit" value="Submit">
-    		</form>
-		</div>
+		<!--<section id="formsection" class="all">-->
+			<!-- Form Division Created -->
+			<div class="container">			
+				<!-- The current URL allows user to send message (through form) directly to my email. I've used 3rd party Formspree backend integration. 
+					We should create an account (Formspree) for our club, thereby replacing the URL that connects to my account, but feel free to try sending 
+					message! I'll show you what it looks like. -->
+				<form id="fs-frm" name="contact form" accept-charset="utf-8" action="https://formspree.io/f/mdovvyoy" method="post">
+					<h3 class="contact-heading">Leave us a message</h3>
+					<fieldset id="fs-frm-inputs">
+						<label for="name">Full Name:</label>
+						<input type="text" name="name" id="name" placeholder="e.g. Steve" required>
+						<br>
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" placeholder="test123@example.com" required>
+						<br>
+						<label for="message">Your Message:</label>
+						<br>
+						<textarea rows="5" name="message" id="message" placeholder="Write your message..." required></textarea>
+						<br>
+						<input type="hidden" name="subject" id="subject" value="Contact Form Submission">
+					</fieldset>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
 		<!-- End of Form -->
-		
+		<!--</section>	-->
+	
+
+		<!-- Footer for the website (By Liao) -->
+		<footer>
+			<div class="first_row">
+				<div class="foot_C">
+					<h4>Contact Us</h4>
+					<ul class="general_contact_info">
+						<li>Address: <a href="https://maps.app.goo.gl/2J9WDijpecjNJhbE9">3000 Landerholm Circle SE, 98007, Bellevue, WA</a></li> 
+						<li>Phone Number: (425) 564-1000</li>
+						<li>Email: ethan.leonard@bellevuecollege.edu</li>
+					</ul>
+				</div>
+				<div class="foot_S">
+					<h4>Follow Us</h4>
+					<ul class="social-media">
+						<li class="instagram"><a href="https://www.instagram.com/bc_programmingclub/"><i class="fa-brands fa-instagram fa-beat-fade" style="color: #cb5cff;"></i></a></li>
+						<li class="discord"><a href="https://discord.gg/FFr86tZ4ce"><i class="fa-brands fa-discord fa-beat" style="color: #005eff;"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<br>
+			<div class="last_row">
+				© Bellevue College Computer Programming Club. All rights reserved.
+				<br>
+				Website by <em>Maximus Carver, Ethan Leonard, & CPC's WebDevTeam</em>
+			</div>
+		</footer>
+
 	</body>
 	
 </html>

@@ -387,62 +387,6 @@ height: 30%;
 
 }
 
-/* Contact form css buggy needs classes rewritten with html elemets in ejs file
-
-.contact-heading {
-	font-family: Rockwell; 
-	margin-left: 25px;
-}
-
-.container {
-	width: 100%;
-    margin: 5px;
-    float: left;
-}
-
-form {
-    background-color: lightgray;
-    border: 5px solid black;
-    border-radius: 10px;
-    padding: 10px;
-	width: 30%;
-	
-}
-
-label {
-    display: block;
-    font-weight: bold;
-	font-family: Rockwell; 
-    margin-bottom: 10px;
-}
-
-input[type="text"],input[type="email"] {
-    width: auto;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-
-textarea {
-	width: 200px;
-	border-radius: 10px;
-}
-
-input[type="submit"] {
-    background-color: blue;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-input[type="submit"]:hover {
-	cursor: pointer;
-	background-color: lightblue;
-}
-
-*/
 
 /* landing */
 
@@ -822,3 +766,33 @@ input[type="submit"]:hover {
 	text-align: center;
 	margin-top: 75px;
 }
+
+/* Footer Styling (By Liao) */
+footer {
+    background-color: #e7e7e7;
+    padding: 40px;
+    margin-top: 30px;
+  }
+.first_row {
+	position: relative;
+}
+.foot_C {
+	position: absolute;
+	left: 50%;
+}
+.foot_S {
+	position: absolute;
+	right: 50%;
+}
+.social-media {
+	list-style-type: none; /*removing the bullet point*/
+	font-size: 35px;
+	text-align: center;
+}
+.last_row {
+	margin-top: 100px;
+	position: relative;
+	color: rgb(47, 47, 49);
+	text-align: center;
+}
+/* End of Footer Styling */
