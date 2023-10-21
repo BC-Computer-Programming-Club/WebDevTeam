@@ -8,6 +8,18 @@ app.use(express.json());
 // Very important line - not too sure what exactly it does but it makes req.body actually work
 app.use(express.urlencoded({ extended : true}));
 
+const validQueries = ["landing", "home", "news", "leadership", "projects", "contact", "about"];
+
+function handlePostRequest(req, res) {
+	const query = (req.body.query || '').toLowerCase();
+
+	if (validQueries.includes(query)) {
+		return res.redirect(`/${query}`);
+	}
+
+	// Handle search error. You might want to redirect or render a different template here.
+	res.status(400).render("homepage.ejs", {searcherror: true});
+}
 
 app.get("/", function(req, res) {
 	res.render("landing.ejs");
@@ -36,26 +48,9 @@ app.get("/home", function(req, res) {
 	res.render("homepage.ejs", {searcherror:searcherror});
 });
 
-app.post("/home", function(req, res) {
-	
-	var query = req.body.query;
-	
-	query = query.toLowerCase();
-	
-	var queries = ["landing", "home", "news", "leadership", "projects", "contact", "about"]
-	
-	if (queries.includes(query)) {
-		var url = "/" + query;
-		res.redirect(url);
-	}	
-	
-	//This is really really bad. Im tired and this works but bad very bad. Fixed at somepoint please. Better way would be to have set search error to true and send that data to /home and have it be so that when searcherror = true then the bootstrap alert goes off, but I don't know how to do that rn but honestly it probably wouldnt be too bad.
-	else {
-		searcherror = true; 
-		res.render("homepage.ejs", {searcherror:searcherror});
-	}
+validQueries.forEach(query => {
+	app.post(`/${query}`, handlePostRequest);
 });
-
 // app.get("/searcherror", function(req, res) {
 	//res.render("searcherror.ejs");
 //});
