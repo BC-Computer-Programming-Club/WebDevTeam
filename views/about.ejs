@@ -27,6 +27,9 @@
 		<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
 		<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
 
+		<!-- Linking Footer CSS (By Liao) -->
+		<link rel="stylesheet" type="text/css" href="/stylesheets/footer.css">
+		
 		<!-- connecting to fontawesome.com for icons (By Liao) -->
 		<script src="https://kit.fontawesome.com/a58ede48c2.js" crossorigin="anonymous"></script>
 		
@@ -74,35 +77,40 @@
             </p>
         </section>
     </main>
-		
-	</body>
+
 	<!-- Footer for the website (By Liao) -->
 	<footer>
-		<div class="first_row">
-			<div class="foot_C">
-				<h4>Contact Us</h4>
-				<ul class="general_contact_info">
-					<li>Address: <a href="https://maps.app.goo.gl/2J9WDijpecjNJhbE9">3000 Landerholm Circle SE, 98007, Bellevue, WA</a></li> 
-					<li>Phone Number: (425) 564-1000</li>
-					<li>Email: ethan.leonard@bellevuecollege.edu</li>
-				</ul>
-			</div>
-			<div class="foot_S">
-				<h4>Follow Us</h4>
-				<ul class="social-media">
-					<li class="instagram"><a href="https://www.instagram.com/bc_programmingclub/"><i class="fa-brands fa-instagram fa-beat-fade" style="color: #cb5cff;"></i></a></li>
-					<li class="discord"><a href="https://discord.gg/FFr86tZ4ce"><i class="fa-brands fa-discord fa-beat" style="color: #005eff;"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<br>
-		<div class="last_row">
-			© Bellevue College Computer Programming Club. All rights reserved.
-			<br>
-			Website by <em>Maximus Carver, Ethan Leonard, & CPC's WebDevTeam</em>
+		<div class="container">
+		  	<div class="row"> <!--Row 1-->
+				<div class="col-md-6"> <!--Bootstrap Grid System 6/12 colunms. (column 1)-->
+			  		<h3>Contact Us</h3>
+			  		<ul>
+						<li><i class="fa-solid fa-map-pin" style="color: #555a62;"></i><a href="https://maps.app.goo.gl/2J9WDijpecjNJhbE9">3000 Landerholm Circle SE, 98007, Bellevue, WA</a></li>
+						<li><i class="fa-solid fa-phone" style="color: #555a62;"></i>(425) 564-1000</li>
+						<li><i class="fa-solid fa-envelope" style="color: #555a62;"></i>ethan.leonard@bellevuecollege.edu</li>
+			  		</ul>
+				</div>
+				<div class="col-md-6"> <!--Bootstrap Grid System other 6/12 colunms, which makes total 12/12 columns. (column 2)-->
+			  		<h3>Follow Us</h3>
+			  		<ul class="social-icons">
+						<li><a href="https://www.instagram.com/bc_programmingclub/"><i class="fa-brands fa-instagram fa-beat" style="color: #cb5cff;"></i>Instagram</a></li>
+						<li><a href="https://discord.gg/FFr86tZ4ce"><i class="fa-brands fa-discord fa-beat" style="color: #005eff;"></i>Discord</a></li>
+						<li><a href="https://github.com/BC-Computer-Programming-Club/"><i class="fa-brands fa-github fa-beat" style="color: #000000;"></i>Github</a></li>
+			  		</ul>
+				</div>
+		  	</div>
+		  	<div class="row"> <!--Row 2-->
+				<div class="col-12 text-center"> <!--Bootstrap Grid System 12/12 colunms + make the text center.-->
+			  		<p>© Bellevue College Computer Programming Club. All rights reserved.</p>
+					<em>Website by Maximus Carver, Ethan Leonard, & CPC's WebDevTeam</em>
+				</div>
+		  	</div>
 		</div>
 	</footer>
+	<!-- End of Footer (By Liao) -->
 
+	</body>
+		
 </html>	
 		
 	
