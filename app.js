@@ -5,12 +5,6 @@ const bodyParser = require(`body-parser`);
 app.use( bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Mongoose DB stuff
-const { MongoClient } = require("mongodb");
-const uri =
-	"mongodb+srv://ethanleonard821:mIrBb8bdCvxGYAqq@bccomputerprogrammingcl.fwws0ag.mongodb.net/?retryWrites=true&w=majority";;
-const client = new MongoClient(uri);
-client.connect();
 
 app.use(express.static("Public"));
 app.use(express.static("Images"));
