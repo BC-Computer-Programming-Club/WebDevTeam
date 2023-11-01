@@ -1,6 +1,17 @@
 var express = require("express");
 var app = express();
 
+const bodyParser = require(`body-parser`);
+app.use( bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Mongoose DB stuff
+const { MongoClient } = require("mongodb");
+const uri =
+	"mongodb+srv://ethanleonard821:mIrBb8bdCvxGYAqq@bccomputerprogrammingcl.fwws0ag.mongodb.net/?retryWrites=true&w=majority";;
+const client = new MongoClient(uri);
+client.connect();
+
 app.use(express.static("Public"));
 app.use(express.static("Images"));
 app.use(express.json());
@@ -67,6 +78,10 @@ app.get("/contact", function(req, res) {
 
 app.get("/news", function(req, res) {
 	res.render("news.ejs");	
+});
+
+app.get("/gallery", function(req, res) {
+	res.render("gallery.ejs");	
 });
 
 
