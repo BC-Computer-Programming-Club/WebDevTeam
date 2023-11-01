@@ -1,6 +1,61 @@
 <!DOCTYPE html>
 
 <html class="home-html">
+
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f5f5f5;
+		}
+
+		.container {
+			width: 80%;
+			margin: 20px auto;
+			padding: 20px;
+			background-color: lightgrey;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+		}
+
+		.news-item {
+			margin: 20px 0;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #f9f9f9;
+			display: flex;
+			align-items: center;
+			transition: transform 0.2s ease;
+		}
+
+		.news-item:hover {
+			transform: scale(1.02);
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+		}
+
+		.news-item img {
+			max-width: 150px;
+			max-height: 150px;
+			margin-right: 20px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+		}
+
+		.news-item h2 {
+			color: #333;
+			font-size: 24px;
+			margin: 0;
+		}
+
+		.news-item p {
+			color: #666;
+			font-size: 16px;
+		}
+	</style>
+
+
 	
 	<head class="home-head">
 		
@@ -45,20 +100,40 @@
                 -->
 			</form>
 		</div>
-		
-		<img class="center" src="cone.jpg" alt="cone">
+
+		<div class="container">
+			<div class="news-item">
+				<img src="guestSpeaker.jpeg" alt="Speaker">
+				<h2>UW Guest Speaker Event</h2>
+				<p>On Decemeber 1st, 2:00-3:00pm in room N201, CPC will be hosting a guest speaker from UW Seattle CS. Our speaker beat the odds and made the 4% acceptance rate for international students!</p>
+			</div>
+
+			<div class="news-item">
+				<img src="microsoftTours.jpeg" alt="Tours">
+				<h2>Upcoming Microsoft Redmond Tours</h2>
+				<p>We are excited to announce an upcoming tours of Microsoft on November 10th. Get ready to learn more about one of the biggest tech companies in the world!</p>
+			</div>
+	
+			<div class="news-item">
+				<img src="calendar.png" alt="Meeting Schedule">
+				<h2>New Club Meeting Schedule</h2>
+				<p>Starting fall quarter, our club will be meeting weekly in room U208! Meetings will be every Friday, 2:00-3:00pm PST.</p>
+			</div>
+	
+			<!-- Add more news items here with images -->
+		</div>
+	
+	</body>
+		<!-- <img class="center" src="cone.jpg" alt="cone">
 		
 		<div id="news-text">
-			Page Under Construction. Check Back Soon!
-		</div>
+			Page Under Construction. Check Back Soon! 
+		</div> -->
 		
 		
-		
+
 	
-		
-	</body>
-	
-	<!-- this is the code for the news page so far. Max was working on this and it looks like a good template but css needs lots of work
+	 <!-- this is the code for the news page so far. Max was working on this and it looks like a good template but css needs lots of work
 	<body>
 		
 		<div class="d-flex justify-content-center">
