@@ -24,9 +24,9 @@ app.get("/", function(req, res) {
 	res.render("landing.ejs");
 });
 
-app.get("/projects", function(req, res) {
-	res.render("projects.ejs");
-});
+// app.get("/projects", function(req, res) {
+	//res.render("projects.ejs");
+//});
 
 app.get("/leadership", function(req, res) {
 	res.render("leadership.ejs");
