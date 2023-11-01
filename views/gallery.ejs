@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
+<title>Gallery</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -11,6 +11,12 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </style>
 
+
+<style>
+  ::-webkit-scrollbar {
+    display: none;
+}
+</style>
 <!-- Makes the webpage dynamically adjust based on device used -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
@@ -44,6 +50,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <a href="/leadership">Leadership</a>
     <a href="/contact">Contact</a>
     <a href="/about">About</a>
+
+    <form method="POST" >
+      <input name="query" id="search-bar" type="text" placeholder="Search..">
+      <!-- Bug with button sucking ass plz fix
+              <button  id="search-submit" type="submit">
+              GO!
+              </button>
+              -->
+    </form>
+
 </div>
 
 <!-- !PAGE CONTENT! -->

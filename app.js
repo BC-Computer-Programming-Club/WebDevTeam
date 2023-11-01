@@ -19,7 +19,7 @@ app.use(express.json());
 // Very important line - not too sure what exactly it does but it makes req.body actually work
 app.use(express.urlencoded({ extended : true}));
 
-const validQueries = ["landing", "home", "news", "leadership", "projects", "contact", "about"];
+const validQueries = ["landing", "home", "news", "leadership", "contact", "about", "gallery"];
 
 function handlePostRequest(req, res) {
 	const query = (req.body.query || '').toLowerCase();
