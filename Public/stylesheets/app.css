@@ -610,32 +610,15 @@ input[type="submit"]:hover {
 
 /* Title */
 .home-h1 {
-	/*text-align: center;*/
+	text-align: center;
 	color: white;
 	background-color: #00308F;
 	font-family: "Lucida Console";
 	margin: 0px;
-	/*padding: 18px 0px;
+	padding: 18px 0px;
 	outline: solid;
-	outline-color: white;*/
-	padding: 0;
-	outline: none;
-	width: 150px;
-}
-/*Bill: I used AI to create a temporary logo, adjusted the height of the navigation bar.
-I also made the navigation bar to be fixed and pinned it onto the top of browser window*/
-.home-h1{
-	height: 80px;
-	width: 150px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
-}
-.club-Logo{
-	height: 80px;
-	width: 150px;
-	object-fit: contain;
+	outline-color: white;
+	
 }
 
 .home-head {
@@ -648,36 +631,47 @@ I also made the navigation bar to be fixed and pinned it onto the top of browser
 .home-topnav {
   	background-color: #72A0C1;
   	overflow: hidden;
-		height: 80px;
-		position: fixed;
-		top:0;
-		left: 150px;
-		right: 0;
-		z-index: 100;
-
 }
 
 /* Style the links inside the navigation bar */
-.home-topnav a {
+.home-topnav button{
+/*.home-topnav a {*/
   	float: left;
   	color: white;
   	text-align: center;
   	/*padding: 14px 16px;*/
-		padding: 25px 16px;
+		padding: none;
   	text-decoration: none;
   	font-size: 20px;
+		/*Bill: changed the appearance a bit*/
+		background-color: #72A0C1;
+		border-color: #72A0C1;
+		border-style: solid;
+		margin-right: 5px;
+		border-radius: 5px;
 }
 
 /* Change the color of links on hover */
-.home-topnav a:hover {
+.home-topnav button:hover{
+/*.home-topnav a:hover {*/
   background-color: #00308F;
   color: white;
+	/*Bill: made the buttons a bit bigger when hover over those*/
+	border-color: black;
+	padding: 5px 10px;
+	box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+  transition: margin-top 0.1s, margin-left 0.1s, box-shadow 0.1s;
 }
 
 /* Add a color to the active/current link */
-.home-topnav a.active {
-  background-color: #04AA6D;
+.home-topnav button:active{
+/*.home-topnav a.active {*/
+  /*background-color: #04AA6D;*/
+	/*Bill: made the bottons move when click on those*/
+	margin-top: 5px;
   color: white;
+  box-shadow: none;
+	padding: none;
 }
 
 /* topnav */
@@ -685,12 +679,11 @@ I also made the navigation bar to be fixed and pinned it onto the top of browser
   	float: right;
   	padding: 6px;
   	border: none;
-  	margin-top: 20px;
+  	margin-top: 11px;
   	margin-right: 16px;
   	font-size: 17px;
-		/*Bill: just rounded the search bar border a bit*/
+		/*Bill: just made the search bar a bit round*/
 		border-radius: 5px;
-	
 }
 
 /* hides the scrollbar but keeps functionality on chrome */
