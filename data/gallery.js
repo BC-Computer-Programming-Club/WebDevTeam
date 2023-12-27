@@ -1,5 +1,13 @@
 const galleryData = [
   {
+    name: "BC Tech Startup Club",
+    author: "Justin Liao",
+    authorLink: "https://www.bcstartup.tech",
+    description: "Defy the Odds!",
+    link: "https://www.bcstartup.tech",
+    img: "https://bcstartup.tech/wp-content/uploads/2023/10/Club-Logo_1_Circle.png",
+  },
+  {
     name: "Bellevue College InfoSec Club",
     author: "Vincent Chau",
     authorLink: "https://vincentczhou.github.io",
