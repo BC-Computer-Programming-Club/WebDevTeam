@@ -31,6 +31,41 @@
     ::-webkit-scrollbar {
       display: none;
     }
+
+    .pages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 15px;
+
+        }
+
+     #page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 350px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: lightgray;
+            font-size: 1.3em;
+            text-align: center;
+            margin-bottom: 15px;
+            margin-right: 15px;
+            margin-left: 15px;
+    } 
+    #pageimg {
+            width: 250px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+    #pagetxt {
+            width: 250px;
+            height: 325px;
+        }
+    
   </style>
   <!-- Makes the webpage dynamically adjust based on device used -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,14 +121,14 @@
 
 
     <!-- First Photo Grid-->
-    <div class="container">
+    <div class="pages">
       <div class="row">
         <% galleryData.forEach((data, idx) => { %>
-        <div class="col-md-3 col-6 d-flex flex-column">
+        <div id="page" class="col-md-3 col-6 d-flex flex-column">
           <a href="<%= data.link %>" target="_blank" rel="noopener" style="display: contents">
-            <img src="<%= data.img %>" alt="<%= data.name %>" style="object-fit: contain"
+            <img id="pageimg" src="<%= data.img %>" alt="<%= data.name %>" style="object-fit: contain"
               class="w3-hover-opacity h-100" />
-            <div class="w3-container w3-white">
+            <div id="pagetxt" class="w3-container w3-white">
               <p><b><%= data.name %></b></p>
           </a>
           <p><%= data.description %> </p>
